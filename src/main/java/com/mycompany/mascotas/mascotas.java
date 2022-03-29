@@ -26,6 +26,9 @@ public class mascotas {
     public String toString() {
         return "mascotas{" + "nombre=" + nombre + ", danio=" + danio + ", vida=" + vida + ", efecto=" + efecto + ", habilidad=" + habilidad + ", tipo=" + tipo + '}';
     }
+    
+    
+    
 
 
     
