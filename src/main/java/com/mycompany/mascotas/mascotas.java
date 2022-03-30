@@ -27,6 +27,7 @@ public class mascotas {
         return "mascotas{" + "nombre=" + nombre + ", danio=" + danio + ", vida=" + vida + ", efecto=" + efecto + ", habilidad=" + habilidad + ", tipo=" + tipo + '}';
     }
     
+    public 
     
     
 
