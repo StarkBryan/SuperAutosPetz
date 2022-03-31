@@ -13,7 +13,7 @@ import com.mycompany.mascotas.mascotas;
 public class mascotaVacia  extends mascotas{
     
     public mascotaVacia (){
-        nombre = "no existe mascota";
+        nombre = "Mascota Vacia";
         danio=0;
         vida =0;
         efecto= false;

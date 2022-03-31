@@ -12,4 +12,13 @@ import com.mycompany.mascotas.mascotas;
  */
 public class elefante extends mascotas{
     
+    
+    public elefante (){
+         nombre = "elefante";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo =" Mamifero Terrestre" ;
+       
+    }
 }

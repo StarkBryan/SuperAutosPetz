@@ -10,6 +10,7 @@ package com.mycompany.mascotas;
  */
 public class nutria extends mascotas  {
     public nutria(){
+         nombre = "nutria";
       danio=1;
          vida=2;
        efecto = false; 

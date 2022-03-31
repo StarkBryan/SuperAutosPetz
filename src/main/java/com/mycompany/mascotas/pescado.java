@@ -10,9 +10,15 @@ package com.mycompany.mascotas;
  */
 public class pescado extends mascotas {
     
-         int danio=2;
-        int vida=3;
+    
+    public pescado(){
+        
+            nombre = "pescado";
+    
+          danio=2;
+         vida=3;
         boolean efecto; //da a un power a todos 
         String tipo , acuatico;
     
+}
 }

@@ -11,6 +11,7 @@ package com.mycompany.mascotas;
 public class castor extends mascotas{
     
     public castor(){
+         nombre = "castor";
       danio=2;
          vida=2;
        efecto = false; 

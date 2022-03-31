@@ -12,5 +12,14 @@ import com.mycompany.mascotas.mascotas;
  */
 public class pavoreal extends mascotas {
     
+    public pavoreal(){
+         nombre = "pavoreal";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo ="domestico volador " ;
+       
+    }
+    
     
 }

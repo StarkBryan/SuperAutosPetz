@@ -11,5 +11,13 @@ import com.mycompany.mascotas.mascotas;
  * @author ASUS
  */
 public class arania extends  mascotas {
+    public arania(){
+         nombre = "arania";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo =" insecto " ;
+       
+    }
     
 }

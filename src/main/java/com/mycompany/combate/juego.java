@@ -1,6 +1,8 @@
 package com.mycompany.combate;
 
 
+import com.mycompany.combate.jugadores.jugador;
+import com.mycompany.combate.jugadores.tiendaAnimales;
 import java.util.Scanner;
 import com.mycompany.mascotas.*;
 import com.mycompany.mascotas.tier2.*;
@@ -12,23 +14,34 @@ import javax.swing.text.StyledEditorKit;
  * @author ASUS
  */
 public class juego {
+    
+    
+    
+    
+      Scanner leer = new Scanner(System.in);
 
     mascotas mascotas = new mascotas();
-    mascotas tienda[] = new mascotas[5];
+    mascotas tienda[] ;
     mascotas jugadorEnemigos[] = new mascotas[5];
     mascotas mascotasJugador[] = new mascotas[5];
     mascotas mascotaVacia[] = new mascotas[5];
-    
+    tiendaAnimales tiendaAnimales;
+    jugador jugador1;
+    int ronda;
+  
  
-
-    int ronda = 1;
-    int nivel;
-
+        public juego (){
+        jugador1 = new jugador();
+    ronda = 1;
+     
+     
+    }
+       
 
     public void inicio() {
         
         int opcion;
-        Scanner leer = new Scanner(System.in);
+      
 
         System.out.println();
         System.out.println();
@@ -58,18 +71,33 @@ public class juego {
     }
 
 
-    public void inicioBatalla() {
 
-    }
 
-    public int opcionesEntreBatallas() {
+    public void opcionesEntreBatallas() {
         int opcion = 0;
         System.out.println(" Comprar mascotas");
         System.out.println(" Comprar comida");
         System.out.println(" Ordenar mascotas como el usuario desee");
         System.out.println(" Fusionar mascotas (para subirlas de nivel)");
         System.out.println("Vender mascotas ");
-
-        return opcion;
+       opcion = leer.nextInt();
+       
+       if(opcion ==1){
+           
+           tienda=tiendaAnimales.tienda(ronda);
+           
+           mascotasJugador=jugador1.asiganmosMascotasJugador(ronda, tienda);
+           
+           
+           
+       }
     }
+    
+    
+    
+    
+        public void inicioBatalla() {
+
+    }
+        
 }

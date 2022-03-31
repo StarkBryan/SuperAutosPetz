@@ -10,7 +10,8 @@ package com.mycompany.mascotas;
  */
 public class mosquito extends mascotas {
     
-    public mosquito(){     
+    public mosquito(){  
+        nombre = "mosco";
     danio=2;
          vida=2;
        efecto = false; 

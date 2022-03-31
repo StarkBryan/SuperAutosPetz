@@ -4,6 +4,8 @@
  */
 package com.mycompany.combate;
 
+import com.mycompany.combate.jugadores.jugador;
+import com.mycompany.combate.jugadores.tiendaAnimales;
 import java.util.Scanner;
 
 /**
@@ -14,9 +16,12 @@ public class principal {
     
     public static void main ( String[] args){
         
-        juego juego1 = new juego();
-        juego1.tienda(1);
-        
+        tiendaAnimales j1 = new tiendaAnimales();
+        j1.tienda(1);
+//        
+//        jugador j2 = new jugador();
+//        j2.mascotasJugador(1);
+//        
         
         
         

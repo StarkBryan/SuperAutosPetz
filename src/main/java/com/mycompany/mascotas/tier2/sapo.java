@@ -11,5 +11,12 @@ import com.mycompany.mascotas.mascotas;
  * @author ASUS
  */
 public class sapo extends mascotas {
-    
+    public sapo(){
+         nombre = "sapo";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo ="terrestre acuatico " ;
+       
+    }
 }

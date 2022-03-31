@@ -11,5 +11,13 @@ import com.mycompany.mascotas.mascotas;
  * @author ASUS
  */
 public class puerco extends mascotas {
+    public puerco(){
+         nombre = "puerco";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo ="terrestre solitario " ;
+       
+    }
     
 }

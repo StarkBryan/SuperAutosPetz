@@ -12,4 +12,13 @@ import com.mycompany.mascotas.mascotas;
  */
 public class dodo  extends mascotas{
     
+    public dodo(){
+         nombre = "dodo";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo =" " ;
+       
+    }
+    
 }

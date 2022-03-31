@@ -11,5 +11,13 @@ import com.mycompany.mascotas.mascotas;
  * @author ASUS
  */
 public class rata  extends mascotas{
+    public rata(){
+         nombre = "rata";
+      danio=2;
+         vida=2;
+       efecto = false; 
+       tipo ="terrestre solitario " ;
+       
+    }
     
 }

@@ -11,11 +11,13 @@ package com.mycompany.mascotas;
 public class grillo  extends mascotas{
     
     public grillo (){
+         nombre = "grillo";
       danio=2;
          vida=2;
        efecto = false; 
        tipo =" " ;
     
     }
+    
 
 }
