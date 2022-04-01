@@ -40,6 +40,7 @@ public class jugador  {
          int opcion = leer.nextInt();
          int salir =1;
          
+         if(oro >2){
          while ( oro >2 && salir!=2){
              
          
@@ -107,7 +108,10 @@ public class jugador  {
          
          
          }// aqui cerramos el while 
-          
+         } else// cerramos el if
+         {
+             System.out.println("no tienes suficiente oro para poder comprar mascotas");
+         }
           
           
         
@@ -117,6 +121,26 @@ public class jugador  {
 
         return mascotasJugador;
     }
+     public mascotas[] ordenaMascotas( mascotas[] mascotasOrdenadas ){ // aqui ordenamos los animales
+         mascotas mascotaAuxiliar = new mascotas();
+         mostrarMascotasJugador(mascotasOrdenadas);
+         System.out.println(" Ordenar tus Mascotas");
+         System.out.println(" Que animal desea mover ");
+         int posicionActual = leer.nextInt();
+         System.out.println(" Donde deseas mover el animal  ");
+         int posicionFinal = leer.nextInt();
+         
+             mascotasOrdenadas[posicionActual-1]=mascotaAuxiliar;
+             mascotasOrdenadas[posicionActual-1]= mascotasOrdenadas[posicionFinal-1];
+             mascotasOrdenadas[posicionFinal-1]=mascotaAuxiliar;
+             
+             
+             
+     
+     
+     
+     return mascotasOrdenadas;
+     }
      
     
     public int  comprar(  int oro){
@@ -136,6 +160,38 @@ public class jugador  {
     
     
     }
+    
+    public void mostrarMascotasJugador(mascotas[] mostrarMascotas){
+        
+        
+        for (int i = 0; i < mostrarMascotas.length; i++) {
+            System.out.println(mostrarMascotas[i]);
+        }
+        
+    
+    
+    
+    }
+    
+    
+    public mascotas [] fusionarMascotas(mascotas [] mascotasFusionar, mascotas[] tienda){
+        System.out.println(" Desea fucionar una mascota desde su lista de animales ");
+        System.out.println(" opcion -------------- 1");
+        System.out.println(" Desea hacer la fusion desde la tienda ?");
+        int opcion = leer.nextInt();
+        if( opcion==1 ){
+            
+             mascotasFusionar[]
+            
+        
+        }
+        
+        
+        
+    
+    return mascotasFusionar;
+    }
+    
 
     
     
