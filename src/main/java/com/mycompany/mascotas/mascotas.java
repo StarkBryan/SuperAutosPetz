@@ -10,13 +10,15 @@ package com.mycompany.mascotas;
  */
 public class mascotas {
     
-    protected String nombre;
+    public String nombre;
     
-    protected int danio;
-    protected int vida;
-    protected boolean efecto;
-    protected int habilidad;
-    protected String tipo;
+    public  int danio;
+    public int vida;
+    public int fusiones=1;
+    public boolean efecto;
+    public int habilidad;
+    public String tipo;
+    
     
     public void comparacion(int danio, int vida , boolean efecto){
         
@@ -24,7 +26,15 @@ public class mascotas {
 
     @Override
     public String toString() {
-        return "mascotas{" + "nombre=" + nombre + ", danio=" + danio + ", vida=" + vida + ", efecto=" + efecto + ", habilidad=" + habilidad + ", tipo=" + tipo + '}';
+        return "mascotas{" +
+               "nombre=" + nombre + 
+             ", danio=" + danio + ","
+            + " vida=" + vida +
+            ", efecto=" + efecto + 
+            ", habilidad=" + habilidad +
+             ", tipo=" + tipo + 
+             ", fusiones=" + fusiones + '}';
+             
     }
     
 //    public 
