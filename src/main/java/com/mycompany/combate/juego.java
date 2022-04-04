@@ -1,6 +1,7 @@
 package com.mycompany.combate;
 
 
+import com.mycompany.combate.jugadores.enemigo;
 import com.mycompany.combate.jugadores.jugador;
 import com.mycompany.combate.jugadores.tiendaAnimales;
 import java.util.Scanner;
@@ -27,13 +28,19 @@ public class juego {
     mascotas mascotaVacia[] = new mascotas[5];
     tiendaAnimales tiendaAnimales;
     jugador jugador1;
-    int ronda;
+      int ronda=1;
+     
+     
+    enemigo ia = new enemigo();
+  
+    
   
  
         public juego (){
+        tiendaAnimales = new tiendaAnimales();
+            
         jugador1 = new jugador();
-    ronda = 1;
-     
+  
      
     }
        
@@ -55,7 +62,7 @@ public class juego {
         opcion = leer.nextInt();
         switch (opcion) {
             case 1:
-                inicioBatalla();
+                opcionesEntreBatallas();
                 break;
             case 2:
                 break;
@@ -63,6 +70,7 @@ public class juego {
                 break;
             case 4:
                 System.out.println("Gracias por Jugar ");
+                
                 break;
             default:
                 break;
@@ -75,29 +83,87 @@ public class juego {
 
     public void opcionesEntreBatallas() {
         int opcion = 0;
-        System.out.println(" Comprar mascotas");
-        System.out.println(" Comprar comida");
-        System.out.println(" Ordenar mascotas como el usuario desee");
-        System.out.println(" Fusionar mascotas (para subirlas de nivel)");
-        System.out.println("Vender mascotas ");
+          
+        
+           while(opcion !=6) {
+               System.out.println("la cantidad de oro es ");
+              
+        System.out.println(" 1  Comprar mascotas");
+        System.out.println(" 2  Comprar comida");
+        System.out.println(" 3  Ordenar mascotas como el usuario desee");
+        System.out.println(" 4  Fusionar mascotas (para subirlas de nivel)");
+        System.out.println(" 5  Vender mascotas ");
+               System.out.println("6 ------------------salir");
        opcion = leer.nextInt();
        
-       if(opcion ==1){
-           
-           tienda=tiendaAnimales.tienda(ronda);
-           
-           mascotasJugador=jugador1.asiganmosMascotasJugador(ronda, tienda);
-           
-           
-           
-       }
+    
+          switch (opcion) {
+             
+              case 1:
+                 tienda=tiendaAnimales.tienda(ronda);
+                  mascotasJugador=jugador1.asiganmosMascotasJugador(ronda, tienda);
+                   
+                  
+                  break;
+              case 2:
+                  ia.jugadorEnemigo(jugadorEnemigos, ronda);
+
+                  break;
+              case 3:
+                  
+                  mascotasJugador=jugador1.ordenaMascotas(mascotasJugador);
+                  break;
+             
+                
+                   case 4:
+                  mascotasJugador=jugador1.fusionarMascotas(mascotasJugador, tienda);
+                  
+               
+                  break;
+                  
+                   case 5:
+                       mascotasJugador=jugador1.venderMascota(mascotasJugador);
+                       break; 
+          }
+           }
+       
     }
+    
+    
     
     
     
     
         public void inicioBatalla() {
+            
+            System.out.println(" ***********Empiza el combate ********");
+            System.out.println(" Equipo tu equipo es");
+           jugador1.mostrarMascotasJugador(mascotasJugador);
+            System.out.println("las mascotas del enemigo son ");
+            ia.jugadorEnemigo(jugadorEnemigos, ronda);
+            
+            for (int i = 0; i < mascotasJugador.length; i++) {
+                if (mascotasJugador[i].danio>jugadorEnemigos[i].vida) {
+                    System.out.println("has perdido contra el oponente ");
+                    
+                }
+                
+               
+                    
+                
+                
+            }
+            
+            
+            
+            
+            
+              
 
     }
+        
+        
+        
+        
         
 }
